@@ -3,6 +3,7 @@
 import 'package:academy_app/home.dart';
 import 'package:academy_app/screens/forgot_password.dart';
 import 'package:academy_app/screens/login_screen.dart';
+import 'package:academy_app/screens/login_success.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
+            builder: (context) => const LogInSuccess(),
           ),
         );
       }
@@ -94,6 +95,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
           ),
           backgroundColor: Colors.black,
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: Badge.count(
+                  count: 5,
+                  child: const Icon(
+                    Icons.notifications,
+                    color: Colors.white,
+                  ),
+                )),
+          ],
         ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -153,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   _Loginwidget(BuildContext context) {
     return Form(
-      key: _formkey, 
+      key: _formkey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -164,8 +176,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           const Text(
             "Hey Enter your details and create an account",
-            style: TextStyle(
-                fontSize: 10, fontWeight: FontWeight.bold, color: Colors.grey),
+            style: TextStyle(fontSize: 10, color: Colors.black),
           ),
           const SizedBox(
             height: 10.0,

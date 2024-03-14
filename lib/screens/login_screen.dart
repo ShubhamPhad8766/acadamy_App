@@ -2,6 +2,7 @@
 
 import 'package:academy_app/home.dart';
 import 'package:academy_app/screens/forgot_password.dart';
+import 'package:academy_app/screens/login_success.dart';
 import 'package:academy_app/screens/sign_up_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -36,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => const LogInSuccess(),
         ),
       );
     } on FirebaseAuthException catch (e) {
