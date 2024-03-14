@@ -64,6 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
+          automaticallyImplyLeading: false,
           title: const Text(
             "FLUTTER ACADEMY",
             style: TextStyle(
