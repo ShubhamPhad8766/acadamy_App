@@ -1,6 +1,5 @@
 // ignore_for_file: non_constant_identifier_names, use_build_context_synchronously
 
-import 'package:academy_app/home.dart';
 import 'package:academy_app/screens/forgot_password.dart';
 import 'package:academy_app/screens/login_success.dart';
 import 'package:academy_app/screens/sign_up_screen.dart';
